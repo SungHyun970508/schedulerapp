@@ -18,7 +18,7 @@ class MainWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      child: Center(child: Text("안녕하십니까")),
+      child: Center(child: Text("안녕하십니까!!!")),
     );
   }
 }
