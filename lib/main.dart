@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return CupertinoApp(
       title: 'calendarImage',
+      theme: CupertinoThemeData(primaryColor: Colors.blue),
       home: AnimatedSplashScreen(
         splash: Image.asset('Assets/Image/calendar.png'),
         nextScreen: MainWidget(),
@@ -28,6 +29,9 @@ class MainWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
+      navigationBar: CupertinoNavigationBar(
+        middle: Text('Login'),
+      ),
       child: Center(child: Text("안녕하십니까!!!")),
     );
   }
