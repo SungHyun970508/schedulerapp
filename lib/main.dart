@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:schedulerapp/signUp.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(CupertinoApp(home: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -29,10 +30,15 @@ class MainWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
-        middle: Text('Login'),
-      ),
-      child: Center(child: Text("안녕하십니까!!!")),
-    );
+        navigationBar: CupertinoNavigationBar(
+          middle: Text('Login'),
+        ),
+        child: Center(
+          child: CupertinoButton(
+              child: Text('Sign Up'),
+              onPressed: () => Navigator.of(context).push(
+                  CupertinoPageRoute<void>(
+                      builder: (BuildContext context) => SignUpPage()))),
+        ));
   }
 }
