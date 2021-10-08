@@ -3,6 +3,7 @@ import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:schedulerapp/login_screen.dart';
 import 'package:schedulerapp/signUp.dart';
+import 'package:schedulerapp/sign_up_test.dart';
 
 void main() {
   runApp(CupertinoApp(home: MyApp()));
@@ -66,7 +67,7 @@ class MainWidget extends StatelessWidget {
                     child: Text('Sign Up'),
                     onPressed: () => Navigator.of(context).push(
                         CupertinoPageRoute<void>(
-                            builder: (BuildContext context) => SignUpPage()))),
+                            builder: (BuildContext context) => SignUpTestPage()))),
               ])),
         ));
   }
