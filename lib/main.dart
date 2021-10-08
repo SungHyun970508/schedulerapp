@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:schedulerapp/login_screen.dart';
 import 'package:schedulerapp/signUp.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: CupertinoThemeData(primaryColor: Colors.blue),
       home: AnimatedSplashScreen(
         splash: Image.asset('Assets/Image/calendar.png'),
-        nextScreen: MainWidget(),
+        nextScreen: LoginScreen(), //MainWidget(),
         splashTransition: SplashTransition.fadeTransition,
         backgroundColor: Colors.blue[100],
         //backgrounColor: Colors.white,
