@@ -17,7 +17,8 @@ class MyApp extends StatelessWidget {
       theme: CupertinoThemeData(primaryColor: Colors.blue),
       home: AnimatedSplashScreen(
         splash: Image.asset('Assets/Image/calendar.png'),
-        nextScreen: LoginScreen(), //MainWidget(),
+        // nextScreen: LoginScreen(),
+        nextScreen: MainWidget(),
         splashTransition: SplashTransition.fadeTransition,
         backgroundColor: Colors.blue[100],
         //backgrounColor: Colors.white,
