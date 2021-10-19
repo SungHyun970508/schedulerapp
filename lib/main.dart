@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       home: AnimatedSplashScreen(
         splash: Image.asset('Assets/Image/calendar.png'),
         // nextScreen: LoginScreen(),
-        nextScreen: MainWidget(),
+        nextScreen: LoginScreen(),
         splashTransition: SplashTransition.fadeTransition,
         backgroundColor: Colors.blue[100],
         //backgrounColor: Colors.white,
@@ -67,7 +67,8 @@ class MainWidget extends StatelessWidget {
                     child: Text('Sign Up'),
                     onPressed: () => Navigator.of(context).push(
                         CupertinoPageRoute<void>(
-                            builder: (BuildContext context) => SignUpTestPage()))),
+                            builder: (BuildContext context) =>
+                                SignUpTestPage()))),
               ])),
         ));
   }
