@@ -33,6 +33,8 @@ Future<UserModel> createUser(
     String pwd,
     String userName) async {
   final String apiUrl = "https://api/v1/auth/sign-up";
+  // final String apiUrl = "https://192.168.100.39:4567/api/v1/auth/sign-up";
+  // final String apiUrl = "https://localhost:4567/api/v1/auth/sign-up";
 
   final response = await http.post(Uri.parse(apiUrl), body: {
     "email": email,
@@ -81,68 +83,57 @@ class _SignUpTestPage extends State<SignUpTestPage> {
           children: <Widget>[
             TextField(
               decoration: InputDecoration(
-                  border: OutlineInputBorder(), hintText: 'Enter email here'
-              ),
+                  border: OutlineInputBorder(), hintText: 'Enter email here'),
               controller: emailController,
             ),
             SizedBox(height: 10),
-
             TextField(
               decoration: InputDecoration(
-                  border: OutlineInputBorder(), hintText: 'Enter group integer here'
-              ),
+                  border: OutlineInputBorder(),
+                  hintText: 'Enter group integer here'),
               controller: groupController,
             ),
             SizedBox(height: 10),
-
             TextField(
               decoration: InputDecoration(
-                  border: OutlineInputBorder(), hintText: 'Enter img string here'
-              ),
+                  border: OutlineInputBorder(),
+                  hintText: 'Enter img string here'),
               controller: imgController,
             ),
             SizedBox(height: 10),
-
             TextField(
               decoration: InputDecoration(
-                  border: OutlineInputBorder(), hintText: 'Enter loginId here'
-              ),
+                  border: OutlineInputBorder(), hintText: 'Enter loginId here'),
               controller: loginIdController,
             ),
             SizedBox(height: 10),
-
             TextField(
               decoration: InputDecoration(
-                  border: OutlineInputBorder(), hintText: 'Enter nickName here'
-              ),
+                  border: OutlineInputBorder(),
+                  hintText: 'Enter nickName here'),
               controller: nickNameController,
             ),
             SizedBox(height: 10),
-
             TextField(
               decoration: InputDecoration(
-                  border: OutlineInputBorder(), hintText: 'Enter phoneNumber here'
-              ),
+                  border: OutlineInputBorder(),
+                  hintText: 'Enter phoneNumber here'),
               controller: phoneNumberController,
             ),
             SizedBox(height: 10),
-
             TextField(
               decoration: InputDecoration(
-                  border: OutlineInputBorder(), hintText: 'Enter pwd here'
-              ),
+                  border: OutlineInputBorder(), hintText: 'Enter pwd here'),
               controller: pwdController,
             ),
             SizedBox(height: 10),
-
             TextField(
               decoration: InputDecoration(
-                  border: OutlineInputBorder(), hintText: 'Enter userName here'
-              ),
+                  border: OutlineInputBorder(),
+                  hintText: 'Enter userName here'),
               controller: userNameController,
             ),
             SizedBox(height: 10),
-
             _user == null
                 ? Container()
                 : Text(
